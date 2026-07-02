@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dziękuję za zakup | Adrian Michna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#131018; --lime:#D4FF3F; --orange:#FF5C39; --text:#F7F5F2; --muted:#a79fb5; --card:#211b2e; --line:rgba(247,245,242,0.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:
+      radial-gradient(circle at 20% 20%, rgba(212,255,63,0.18), transparent 45%),
+      radial-gradient(circle at 90% 80%, rgba(255,92,57,0.22), transparent 45%),
+      var(--bg);
+    color:var(--text); font-family:'Work Sans', sans-serif;
+    min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px;
+  }
+  .card{
+    max-width:520px; text-align:center; background:var(--card);
+    border:1px solid var(--line); border-radius:24px; padding:56px 40px;
+  }
+  .check{
+    width:64px; height:64px; border-radius:50%; background:var(--lime); color:#131018;
+    display:flex; align-items:center; justify-content:center; font-size:30px; font-weight:900;
+    margin:0 auto 24px;
+  }
+  h1{font-family:'Anton',sans-serif; text-transform:uppercase; font-size:32px; margin-bottom:16px;}
+  p{color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:12px;}
+  .note{
+    margin-top:24px; padding:16px 18px; border-radius:14px; background:var(--bg);
+    border:1px solid var(--line); font-size:13px; color:var(--muted); text-align:left;
+  }
+  a.back{
+    display:inline-block; margin-top:28px; color:var(--lime); font-weight:700; font-size:14px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="check">✓</div>
+    <h1>Dziękuję za zakup!</h1>
+    <p>Płatność przebiegła pomyślnie. W ciągu kilku minut dostaniesz e-mail z linkiem do pobrania swojego planu.</p>
+    <p>Nie widzisz wiadomości? Sprawdź folder spam albo napisz na <strong>kontakt@adrianmichna.pl</strong>.</p>
+    <div class="note">
+      ⚙️ Uwaga dla Kajetana: ta strona to redirect ustawiany w Stripe Payment Link
+      (pole „After payment” → „Redirect customers to a website” → adres tej podstrony).
+      Wiadomość e-mail z linkiem do planu wysyła automatycznie funkcja
+      <code>netlify/functions/stripe-webhook.js</code>.
+    </div>
+    <a href="index.html" class="back">← Wróć na stronę główną</a>
+  </div>
+</body>
+</html>

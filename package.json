@@ -1,0 +1,10 @@
+{
+  "name": "adrian-michna-plany",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Strona Adriana Michny - sprzedaż planów treningowych z płatnością Stripe i automatyczną wysyłką mailem",
+  "dependencies": {
+    "stripe": "^16.12.0",
+    "resend": "^3.5.0"
+  }
+}
